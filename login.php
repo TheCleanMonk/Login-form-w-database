@@ -2,6 +2,7 @@
 	session_start();
 
 include 'db.php';
+include 'header.php';
 
 $uid = $_POST['uid'];
 $pwd = $_POST['pwd'];
@@ -19,7 +20,7 @@ if(!$row = $result->fetch_assoc()){
 }
 else{
 	$_SESSION['id'] = $row['id'];
-	echo "Thanks for logging in you are user"; 
+	echo "Thanks for logging in " . $uid; 
 }
 
 // header("Location: fun.php");

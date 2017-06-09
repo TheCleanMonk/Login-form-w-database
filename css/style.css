@@ -2,3 +2,12 @@
 	background-color:violet;
 	top:50px;
 }
+#loginCheck{
+	float:right;
+}
+input.form-control {
+    width: 20%;
+}
+#incompleteForm{
+	color:red;
+}

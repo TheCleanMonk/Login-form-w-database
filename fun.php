@@ -5,26 +5,31 @@
 	<!DOCTYPE html>
 	<html>
 	<head>
-	<link rel="stylesheet" type="text/css" herf="/css/style.css">
+	
 	<meta charset= 'UTF-8'>
 	</head>
 	<body>
-	<form action='login.php' method='POST'>
-		<input type='text' name='uid' placeholder='Username'><br>
-		<input type='Password' name='pwd' placeholder='Password'><br>
-		<button type='submit'>Sign up</button>
+	<form id = "loginForm" action='login.php' method='POST'>
+		<div class="form-group">
+		<label for="username">Username</label>
+		<input class="form-control" type='text' name='uid' placeholder='Username'><br>
+		</div>
+		<div class = "form-group">
+		<label for="password">Password</label>
+		<input class="form-control" type='Password' name='pwd' placeholder='Password'><br>
+		<button class="btn btn-default" type='submit'>Sign In</button>
+		</div>
 	</form>
-	<?php
-		if(isset($_SESSION['id'])){
-			echo $_SESSION['id'];
-		}
-		else{
-			echo "You are not logged in";
-		}
-	?>
+
 	<br><br><br>
 	<form action = "logout.php">
-		<button>LOG OUT</button>
+	<?php
+	if(!isset($_SESSION['id'])){
+	}
+	else{
+		echo "<button class='btn btn-default'>LOG OUT</button>";
+	}
+	?>
 	</form>
 	</body>
 	</html>
