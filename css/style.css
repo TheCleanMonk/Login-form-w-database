@@ -11,3 +11,6 @@ input.form-control {
 #incompleteForm{
 	color:red;
 }
+#formBox,#incompleteForm,#loginForm{
+	margin-left:5%;
+}
